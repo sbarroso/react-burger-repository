@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders'
+import axios from '../../axios-orders';
 
 export const purchaseBurgerSuccess = (id, orderData) => {
     return {
@@ -22,6 +22,7 @@ export const purchaseBurgerStart = (orderData) => {
     };
 }
 
+// Using redux-thunk
 export const purchaseBurger = (orderData, token) => {
     return dispatch =>  {
         dispatch(purchaseBurgerStart());
@@ -63,6 +64,7 @@ export const fetchOrdersStart = () => {
     };
 }
 
+// Using redux-thunk
 export const fetchOrders = (token, userId) => {    
     return dispatch =>  {
         dispatch(fetchOrdersStart);
